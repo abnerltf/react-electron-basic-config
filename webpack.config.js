@@ -5,7 +5,7 @@ const appDirectory = fs.realpathSync(process.cwd());
 const resolveAppPath = relativePath => path.resolve(appDirectory, relativePath);
 
 process.env.NODE_ENV = 'development';
-console.log(resolveAppPath('src'))
+
 module.exports = [
   {
     mode: 'development',
@@ -31,6 +31,12 @@ module.exports = [
             }
           }
         },
+      ]
+    },
+    resolve: {
+      modules: [
+        path.resolve('./src'),
+        path.resolve('./node_modules')
       ]
     },
     devServer: {

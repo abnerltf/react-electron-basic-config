@@ -6,19 +6,19 @@
   "main": ".webpack/main",
   "scripts": {
     "start": "npm run build && electron ./index.js",
-    "webpack-start": "webpack-dev-server --config=./webpack.config.js & webpack --watch",
+    "webpack": "webpack-dev-server --config=./webpack.config.js & webpack --watch",
     "electron": "electron ./index.js",
     "old-start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
+    "postinstall": "install-app-deps",
     "lint": "echo \"No linting configured\"",
     "build": "webpack --mode production"
   },
   "keywords": [],
   "author": {
-    "name": "Abner Lima",
-    "email": "abner.lima@agenciarazzo.com.br"
+    "name": "Abner Lima"
   },
   "license": "MIT",
   "config": {
@@ -82,7 +82,9 @@
     "css-loader": "^3.0.0",
     "electron": "8.2.5",
     "node-loader": "^0.6.0",
-    "style-loader": "^0.23.1"
+    "style-loader": "^0.23.1",
+    "webpack": "^4.43.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.13",
@@ -90,8 +92,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "sqlite3": "^4.2.0",
+    "webpack-cli": "^3.3.11"
   }
 }
