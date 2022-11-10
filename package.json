@@ -80,7 +80,7 @@
     "babel-loader": "^8.1.0",
     "concurrently": "^5.2.0",
     "css-loader": "^3.0.0",
-    "electron": "8.2.5",
+    "electron": "18.3.7",
     "node-loader": "^0.6.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.43.0",
